@@ -1206,3 +1206,81 @@ html {
     right: -15px;
     color: #0a3d91;
 }
+
+/* =========================================
+   NAVIGATION PAGE PAR PAGE
+   ========================================= */
+
+.page-panel {
+    display: none;
+    width: 100%;
+    min-height: calc(100vh - 75px);
+}
+
+.page-panel.is-active {
+    display: block;
+    animation: slideInHorizontal 0.4s ease both;
+}
+
+/* La page active commence sous la barre de navigation */
+.hero.page-panel.is-active {
+    display: grid;
+}
+
+.page-panel.is-active > .section-navigation {
+    display: flex;
+}
+
+@keyframes slideInHorizontal {
+    from {
+        opacity: 0;
+        transform: translateX(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Indique l'onglet actuellement sélectionné */
+.nav-links a.active {
+    color: #0a3d91;
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    height: 2px;
+    background: #0a3d91;
+}
+
+/* Conserve le contenu lisible sur les petits écrans */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        min-height: 75px;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 15px 5%;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .page-panel {
+        min-height: calc(100vh - 75px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-panel.is-active {
+        animation: none;
+    }
+}
