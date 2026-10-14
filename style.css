@@ -1,0 +1,1208 @@
+/* =========================
+   GENERAL
+========================= */
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #111111;
+    background: #f8f9fb;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 60px;
+    padding: 110px 10% 80px;
+    background: #f8f9fb;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 700px;
+    position: relative;
+    z-index: 5;
+}
+
+.eyebrow {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #0a3d91;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.05;
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    max-width: 650px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background: #0a3d91;
+    color: white;
+}
+
+.btn-secondary {
+    border: 1px solid #111;
+    color: #111;
+}
+/* ================================
+   HERO — PHOTO & DATA ELEMENTS
+================================ */
+
+.hero-visual {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.hero-photo {
+    position: relative;
+    width: 360px;
+    height: 470px;
+    z-index: 4;
+    overflow: hidden;
+    border-radius: 3px;
+    background: white;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: contrast(1.02) saturate(0.95);
+}
+
+.hero-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Éléments statistiques */
+
+.stat-element {
+    position: absolute;
+    z-index: 5;
+    color: #0a3d91;
+    font-weight: 700;
+    background: #ffffff;
+    border: 1px solid #d9e0eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.stat-mu {
+    top: 45px;
+    left: 5px;
+    font-size: 38px;
+    padding: 12px 18px;
+}
+
+.stat-sigma {
+    top: 135px;
+    right: -5px;
+    font-size: 32px;
+    padding: 10px 16px;
+}
+
+.stat-xbar {
+    bottom: 65px;
+    left: 10px;
+    font-size: 30px;
+    padding: 10px 15px;
+}
+
+.stat-n {
+    bottom: 10px;
+    right: 15px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 10px 14px;
+}
+
+.stat-pvalue {
+    top: 42%;
+    right: -20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 9px 13px;
+}
+
+
+/* Petits points représentant les données */
+
+.data-dots {
+    position: absolute;
+    left: 20px;
+    bottom: 175px;
+    width: 75px;
+    height: 75px;
+    z-index: 2;
+}
+
+.data-dots span {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: #0a3d91;
+    border-radius: 50%;
+}
+
+.data-dots span:nth-child(1) {
+    left: 5px;
+    bottom: 10px;
+}
+
+.data-dots span:nth-child(2) {
+    left: 18px;
+    bottom: 25px;
+}
+
+.data-dots span:nth-child(3) {
+    left: 30px;
+    bottom: 17px;
+}
+
+.data-dots span:nth-child(4) {
+    left: 43px;
+    bottom: 40px;
+}
+
+.data-dots span:nth-child(5) {
+    left: 55px;
+    bottom: 32px;
+}
+
+.data-dots span:nth-child(6) {
+    left: 65px;
+    bottom: 55px;
+}
+
+/* =========================
+   SMALL TITLE
+========================= */
+
+.eyebrow {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #0a3d91;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   MAIN TITLE
+========================= */
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.05;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero-description {
+    max-width: 650px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background: #0a3d91;
+    color: white;
+}
+
+.btn-secondary {
+    border: 1px solid #111111;
+    color: #111111;
+}
+/* =========================
+   MY STORY
+========================= */
+
+.story {
+    min-height: 100vh;
+    padding: 120px 10%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 100px;
+    align-items: center;
+    background: white;
+}
+
+.story-content {
+    max-width: 750px;
+}
+
+.section-label {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #0a3d91;
+    margin-bottom: 20px;
+}
+
+.story h2 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 40px;
+}
+
+.story-content p:not(.section-label) {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555555;
+    margin-bottom: 25px;
+}
+
+.story-highlight {
+    border-left: 2px solid #0a3d91;
+    padding-left: 35px;
+}
+
+.story-number {
+    display: block;
+    font-size: 70px;
+    font-weight: bold;
+    color: #0a3d91;
+    margin-bottom: 30px;
+}
+
+.highlight-title {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.highlight-text {
+    font-size: 28px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+/* =========================
+   MY JOURNEY
+========================= */
+
+.journey {
+    padding: 120px 10%;
+    background: #f8f9fb;
+}
+
+.journey-header {
+    max-width: 800px;
+    margin-bottom: 90px;
+}
+
+.journey h2 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.journey-header > p:last-child {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555555;
+    max-width: 650px;
+}
+
+
+/* TIMELINE */
+
+.timeline {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 50px;
+    padding: 45px 0;
+    border-top: 1px solid #d9d9d9;
+}
+
+.timeline-year {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0a3d91;
+    letter-spacing: 1px;
+}
+
+.timeline-content h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.timeline-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.timeline-content p:last-child {
+    color: #666666;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 650px;
+}
+/* =========================
+   WHAT I BUILD
+========================= */
+
+.projects {
+    padding: 120px 10%;
+    background: white;
+}
+
+.projects-header {
+    max-width: 800px;
+    margin-bottom: 80px;
+}
+
+.projects h2 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.projects-header > p:last-child {
+    color: #555555;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+
+/* PROJECT GRID */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    padding: 45px;
+    background: #f8f9fb;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card.featured {
+    background: #0a3d91;
+    color: white;
+}
+
+.project-number {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.project-type {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.project-content h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.project-content p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.project-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tools span {
+    padding: 7px 12px;
+    border: 1px solid currentColor;
+    font-size: 12px;
+    border-radius: 20px;
+}
+/* =========================
+   SECTION NAVIGATION
+========================= */
+
+.section-navigation {
+    margin-top: 70px;
+    display: flex;
+    gap: 15px;
+}
+
+.section-link {
+    display: inline-block;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 1px solid #111111;
+    color: #111111;
+    transition: all 0.3s ease;
+}
+
+.section-link:hover {
+    background: #0a3d91;
+    color: white;
+    border-color: #0a3d91;
+}
+/* =========================
+   MY TOOLBOX
+========================= */
+
+.toolbox {
+    padding: 120px 10%;
+    background: #f8f9fb;
+}
+
+.toolbox-header {
+    max-width: 800px;
+    margin-bottom: 80px;
+}
+
+.toolbox h2 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.toolbox-header > p:last-child {
+    color: #555555;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+
+/* SKILLS */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #d9d9d9;
+}
+
+.skill-category {
+    background: white;
+    padding: 35px;
+    min-height: 220px;
+}
+
+.skill-number {
+    font-size: 13px;
+    font-weight: bold;
+    color: #0a3d91;
+}
+
+.skill-category h3 {
+    font-size: 23px;
+    margin: 25px 0;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-list span {
+    font-size: 13px;
+    padding: 7px 11px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+}
+/* =========================
+   BEYOND DATA
+========================= */
+
+.beyond {
+    padding: 120px 10%;
+    background: white;
+}
+
+.beyond-header {
+    max-width: 800px;
+    margin-bottom: 80px;
+}
+
+.beyond h2 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.beyond-header > p:last-child {
+    color: #555555;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+
+/* EXPERIENCE GRID */
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.experience-card {
+    padding: 40px;
+    border: 1px solid #dddddd;
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-6px);
+}
+
+.experience-icon {
+    font-size: 13px;
+    font-weight: bold;
+    color: #0a3d91;
+}
+
+.experience-type {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 30px 0 15px;
+}
+
+.experience-card h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.experience-card p:last-child {
+    color: #666666;
+    line-height: 1.7;
+}
+/* =========================
+   MY VISION
+========================= */
+
+.vision {
+    padding: 140px 10%;
+    background: #0a3d91;
+    color: white;
+}
+
+.vision .section-label {
+    color: white;
+}
+
+.vision-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.vision h2 {
+    font-size: 64px;
+    line-height: 1.05;
+    margin-bottom: 35px;
+}
+
+.vision-intro {
+    max-width: 750px;
+    font-size: 21px;
+    line-height: 1.7;
+    margin-bottom: 90px;
+}
+
+
+/* VISION PATH */
+
+.vision-path {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+}
+
+.vision-step {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding-top: 25px;
+}
+
+.vision-step span {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.vision-step h3 {
+    font-size: 24px;
+    margin: 25px 0 15px;
+}
+
+.vision-step p {
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+
+/* QUOTE */
+
+.vision-quote {
+    margin-top: 100px;
+    padding-top: 50px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    max-width: 900px;
+}
+
+.vision-quote p {
+    font-size: 32px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+
+/* BUTTONS ON BLUE BACKGROUND */
+
+.vision .section-link {
+    color: white;
+    border-color: white;
+}
+
+.vision .section-link:hover {
+    background: white;
+    color: #0a3d91;
+}
+/* =========================
+   WHY HEC
+========================= */
+
+.hec {
+    padding: 120px 10%;
+    background: #f8f9fb;
+}
+
+.hec-header {
+    max-width: 800px;
+    margin-bottom: 80px;
+}
+
+.hec h2 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hec-header > p:last-child {
+    color: #555555;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 700px;
+}
+
+
+/* TEXT + TABLE */
+
+.hec-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 80px;
+}
+
+.hec-point {
+    border-top: 1px solid #cccccc;
+    padding: 25px 0;
+}
+
+.hec-point span {
+    color: #0a3d91;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hec-point h3 {
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+.hec-point p {
+    color: #666666;
+    line-height: 1.7;
+}
+
+
+/* DATA TABLE */
+
+.hec-data {
+    background: white;
+    padding: 35px;
+}
+
+.data-label {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #0a3d91;
+    margin-bottom: 25px;
+}
+
+.data-row {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+    padding: 17px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+}
+
+.data-header {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* DATA BAR CHART */
+
+.hec-chart {
+    background: white;
+    padding: 40px;
+    max-width: 900px;
+}
+
+.bar-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.bar-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.bar {
+    height: 12px;
+    background: #e5e5e5;
+}
+
+.bar-fill {
+    height: 100%;
+    background: #0a3d91;
+}
+
+.width-90 {
+    width: 90%;
+}
+
+.width-80 {
+    width: 80%;
+}
+
+.width-65 {
+    width: 65%;
+}
+
+.width-45 {
+    width: 45%;
+}
+
+.chart-note {
+    margin-top: 25px;
+    color: #777777;
+    font-size: 12px;
+    line-height: 1.5;
+}
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    padding: 140px 10%;
+    background: #111111;
+    color: white;
+}
+
+.contact-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact .section-label {
+    color: #ffffff;
+}
+
+.contact h2 {
+    font-size: 70px;
+    line-height: 1.05;
+    margin-bottom: 30px;
+}
+
+.contact-intro {
+    max-width: 650px;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #bbbbbb;
+    margin-bottom: 70px;
+}
+
+
+/* CONTACT CARDS */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.contact-card {
+    padding: 30px;
+    border: 1px solid #444444;
+    color: white;
+    text-decoration: none;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    background: #0a3d91;
+    border-color: #0a3d91;
+    transform: translateY(-5px);
+}
+
+.contact-card span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #aaaaaa;
+}
+
+.contact-card strong {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* MINI DATA DISPLAY */
+
+.contact-data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    margin-top: 70px;
+    background: #444444;
+}
+
+.stat-card {
+    background: #111111;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stat-card strong {
+    font-size: 25px;
+}
+
+.stat-card span {
+    color: #aaaaaa;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+
+/* NAVIGATION */
+
+.contact .section-link {
+    color: white;
+    border-color: #666666;
+}
+
+.contact .section-link:hover {
+    background: white;
+    color: #111111;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background: rgba(248, 249, 251, 0.92);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #e5e5e5;
+
+    z-index: 1000;
+}
+
+.logo {
+    text-decoration: none;
+    color: #111;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #0a3d91;
+}
+.stat-element {
+    animation: floatingData 4s ease-in-out infinite;
+}
+
+.stat-sigma {
+    animation-delay: 0.8s;
+}
+
+.stat-xbar {
+    animation-delay: 1.4s;
+}
+
+.stat-n {
+    animation-delay: 2s;
+}
+
+.stat-pvalue {
+    animation-delay: 0.5s;
+}
+
+@keyframes floatingData {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+.mini-chart {
+    position: absolute;
+    left: -5px;
+    top: 115px;
+    width: 110px;
+    height: 75px;
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #d9e0eb;
+    z-index: 2;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.mini-chart span {
+    flex: 1;
+    background: #0a3d91;
+    opacity: 0.75;
+    transform-origin: bottom;
+    animation: chartGrow 1.2s ease-out forwards;
+}
+
+.mini-chart span:nth-child(2) {
+    animation-delay: 0.08s;
+}
+
+.mini-chart span:nth-child(3) {
+    animation-delay: 0.16s;
+}
+
+.mini-chart span:nth-child(4) {
+    animation-delay: 0.24s;
+}
+
+.mini-chart span:nth-child(5) {
+    animation-delay: 0.32s;
+}
+
+.mini-chart span:nth-child(6) {
+    animation-delay: 0.40s;
+}
+
+.mini-chart span:nth-child(7) {
+    animation-delay: 0.48s;
+}
+
+.mini-chart span:nth-child(8) {
+    animation-delay: 0.56s;
+}
+
+.mini-chart span:nth-child(9) {
+    animation-delay: 0.64s;
+}
+
+@keyframes chartGrow {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+.data-line {
+    position: absolute;
+    width: 75px;
+    height: 1px;
+    background: #0a3d91;
+    transform: rotate(-28deg);
+    left: 0;
+    bottom: 32px;
+    opacity: 0.35;
+}
+.hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+    margin-bottom: 35px;
+}
+
+.hero-meta span {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #777;
+    position: relative;
+}
+
+.hero-meta span:not(:last-child)::after {
+    content: "·";
+    position: absolute;
+    right: -15px;
+    color: #0a3d91;
+}
